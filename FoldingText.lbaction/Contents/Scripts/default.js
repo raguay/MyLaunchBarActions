@@ -81,6 +81,16 @@ function runWithString(string) {
 			actionReturnsItems: false
 		});
 	}
+	if("firefox tabs".search(string) != -1) {
+		result.push({
+			title: "FireFox Tabs",
+			subtitle: "FoldingText Actions",
+			icon: "icon",
+			action: 'firefox',
+			actionRunsInBackground: true,
+			actionReturnsItems: false
+		});
+	}
 	if("safari tabs".search(string) != -1) {
 		result.push({
 			title: "Safari Tabs",
@@ -157,6 +167,17 @@ function getvisible(obj) {
 //
 function chrome(obj) {
 	LaunchBar.execute("/usr/bin/osascript","chrometabs.scpt");
+}
+
+//
+// Function: 		firefox
+//
+// Description: 	This function calls an osascript create a link to
+//						all the current tabs in the current FireFox browser
+//						into the topmost FoldingText document.
+//
+function firefox(obj) {
+	LaunchBar.execute("/usr/bin/osascript","firefoxtabs.scpt");
 }
 
 //
