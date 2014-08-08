@@ -29,7 +29,9 @@ This action is triggered with **ft-addtotag**. When triggered, you can type anyt
 
 This action is triggered by **ft-bookmark**. It will prompt you with a list of actions: **go to bookmark**, **make bookmark**, **remove bookmard**, or **install bookmark activator**. 
 
-The **make-bookmark** requires you to add a text to set as the title for the bookmark. Therefore, type **mark|This is my title** will get the current location in the topmost FoldingText document and remember it with the title **This is my title**. The **|** tells the script that the next item is the title. 
+The **make-bookmark** requires you to add a text to set as the title for the bookmark. Therefore, type **mark|This is my title** will get the current location in the topmost FoldingText document and remember it with the title **This is my title**. The **|** tells the script that the next item is the title.  The **make-bookmark** also lease the URI in the clipboard.
+
+The **get-bookmark-UIR** will simple get the URI for the current location in the current FoldingText document and place it in the clipboard. You can then paste it in to another application or document. Great for making jump to lists.
 
 In order to go to a bookmark, the **bookmark activator** has to be ran at least once on your system. This will add a special URI handler for FoldingText bookmarks.
 

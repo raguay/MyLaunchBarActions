@@ -90,6 +90,16 @@ function runWithString(string) {
 			actionReturnsItems: false
 		});
 	}
+	if("get bookmark uri".search(string) != -1) {
+		result.push({
+			title: "Get Bookmark URI",
+			subtitle: "FoldingText Actions",
+			icon: "icon",
+			action: 'getbkmkURI',
+			actionRunsInBackground: true,
+			actionReturnsItems: false
+		});
+	}
 	if("install bookmarker".search(string) != -1) {
 		result.push({
 			title: "Install Bookmark Activator",
@@ -253,4 +263,18 @@ function removebookmark(obj) {
 //
 function installBKA(obj) {
 	LaunchBar.execute("/usr/bin/open","OpenFTDocAtLine.app");
+}
+
+//
+// Function: 		getbkmkURI
+//
+// Description: 	This function will call a osascript file to get the
+//						bookmark URI from the topmost FoldingText document
+//						and leave it in the clipboard.
+//
+function getbkmkURI() {
+	//
+	// Get the URI. The routine will put it into the clipboard as well.
+	//
+	var bkmark = LaunchBar.execute("/usr/bin/osascript", "./FTCopyAsURL.scpt");
 }
