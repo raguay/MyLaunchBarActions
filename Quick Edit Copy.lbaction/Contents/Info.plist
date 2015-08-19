@@ -51,5 +51,7 @@
 	</dict>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.10</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
 </dict>
 </plist>
