@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>edit-validated-icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.customct.LaunchBar.action.QuickEditSetEditor</string>
+	<key>CFBundleName</key>
+	<string>Quick Edit Set Editor</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBArgument</key>
+	<string>none</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBArgument</key>
+		<string>none</string>
+		<key>LBAuthor</key>
+		<string>Richard Guay</string>
+		<key>LBEmail</key>
+		<string>raguay@customct.com</string>
+		<key>LBResult</key>
+		<string>none</string>
+		<key>LBSummary</key>
+		<string>This command sets the editor to use for the Quick Edit feature. Have the editor you want to use as the front most window and invoke the action "Quick Edit Set Editor". That editor will be opened and used as the Quick Edit editor.</string>
+		<key>LBTwitter</key>
+		<string>@CustomComputerT</string>
+		<key>LBWebsite</key>
+		<string>customct.com</string>
+	</dict>
+	<key>LBResult</key>
+	<string>none</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.scpt</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
+</dict>
+</plist>

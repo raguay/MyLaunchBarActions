@@ -43,6 +43,15 @@ This action is triggered with **ft-gototag**. It will show a list of tags from t
 
 This action is triggered with **ft-inbox**. It allows you to type any text and have it appended to the bottom of that tag. Therefore, if you have a todo list with a tag of @inbox, you can type **- I need to do this** and it will be added to the todo list properly.
 
+Quick Edit
+---
+
+The three actions **Quick Edit Copy.lbaction**, **Quick Edit Paste.lbaction**, and **Quick Edit Set Editor.lbaction** are used to perform a similar function as the now defunct program **QuickEdit**. 
+
+To use these actions, you have to first set your default **Quick Edit** editor by having it as the topmost application when you run the **Quick Edit Set Editor** action. The **Quick Edit** functionality is now usable.
+
+With the application open that contains text you want to edit in another application, run the **Quick Edit Copy** action. Then make your changes and run the **Quick Edit Paste** action. The text will be copied back to the original application.
+
 [Customct.com](http://customct.com)
 ---
 
