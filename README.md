@@ -46,11 +46,13 @@ This action is triggered with **ft-inbox**. It allows you to type any text and h
 Quick Edit
 ---
 
-The three actions **Quick Edit Copy.lbaction**, **Quick Edit Paste.lbaction**, and **Quick Edit Set Editor.lbaction** are used to perform a similar function as the now defunct program **QuickEdit**. 
+The four actions **Quick Edit Copy.lbaction**, **Quick Edit Clipboard**, **Quick Edit Paste.lbaction**, and **Quick Edit Set Editor.lbaction** are used to perform a similar function as the now defunct program **QuickEdit**. 
 
 To use these actions, you have to first set your default **Quick Edit** editor by having it as the topmost application when you run the **Quick Edit Set Editor** action. The **Quick Edit** functionality is now usable.
 
 With the application open that contains text you want to edit in another application, run the **Quick Edit Copy** action. Then make your changes and run the **Quick Edit Paste** action. The text will be copied back to the original application.
+
+If you just want to edit a selection, first copy the selection and run the **Quick Edit Clipboard** action. Then make your changes to in the selected **Quick Edit** editor and  run the **Quick Edit Paste** action.
 
 [Customct.com](http://customct.com)
 ---
