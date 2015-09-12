@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>icon.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.customct.LaunchBar.action.DockShelfWorkspaces</string>
+	<key>CFBundleName</key>
+	<string>DockShelf Workspaces</string>
+	<key>LBAbbreviation</key>
+	<string>dsws</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Richard Guay</string>
+		<key>LBEmail</key>
+		<string>raguay@customct.com</string>
+		<key>LBTwitter</key>
+		<string>@CustomComputerT</string>
+		<key>LBWebsite</key>
+		<string>customct.com</string>
+	</dict>
+	<key>LBRequiredApplication</key>
+	<string>com.alchemistguild.DockShelf</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LBTextInputTitle</key>
+	<string>Switch Dockshelf Workspaces</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.10</string>
+</dict>
+</plist>

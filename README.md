@@ -3,6 +3,15 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+DockShelf.app
+---
+
+[DockShelf](http://www.thealchemistguild.com/dockshelf/) is a great dock replacement program for Mac OS X. The following actions are for this program:
+
+**DockShelfWorkspaces.lbaction**
+
+This action has an abbreviation set to `dsws` to show a list of workspaces defined. When you select one, **DockShelf** will switch to that workspace.
+
 FoldingText.app
 ---
 
