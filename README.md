@@ -32,11 +32,11 @@ This is a collection of quick scripts for performing different actions. You type
 
 **FoldingTextAddToTag.lbaction**
 
-This action is triggered with **ft-addtotag**. When triggered, you can type anything and have that added to the tag you select from a list of tags obtained from the topmost document. Therefore, if you topmost document has a @inbox tag, it will list it for you to add a new item. 
+This action is triggered with **ft-addtotag**. When triggered, you can type anything and have that added to the tag you select from a list of tags obtained from the topmost document. Therefore, if you topmost document has a @inbox tag, it will list it for you to add a new item.
 
 **FoldingTextBookMarks.lbaction**
 
-This action is triggered by **ft-bookmark**. It will prompt you with a list of actions: **go to bookmark**, **make bookmark**, **remove bookmard**, or **install bookmark activator**. 
+This action is triggered by **ft-bookmark**. It will prompt you with a list of actions: **go to bookmark**, **make bookmark**, **remove bookmard**, or **install bookmark activator**.
 
 The **make-bookmark** requires you to add a text to set as the title for the bookmark. Therefore, type **mark|This is my title** will get the current location in the topmost FoldingText document and remember it with the title **This is my title**. The **|** tells the script that the next item is the title.  The **make-bookmark** also lease the URI in the clipboard.
 
@@ -55,7 +55,7 @@ This action is triggered with **ft-inbox**. It allows you to type any text and h
 Quick Edit
 ---
 
-The four actions **Quick Edit Copy.lbaction**, **Quick Edit Clipboard**, **Quick Edit Paste.lbaction**, and **Quick Edit Set Editor.lbaction** are used to perform a similar function as the now defunct program **QuickEdit**. 
+The four actions **Quick Edit Copy.lbaction**, **Quick Edit Clipboard**, **Quick Edit Paste.lbaction**, and **Quick Edit Set Editor.lbaction** are used to perform a similar function as the now defunct program **QuickEdit**.
 
 To use these actions, you have to first set your default **Quick Edit** editor by having it as the topmost application when you run the **Quick Edit Set Editor** action. The **Quick Edit** functionality is now usable.
 

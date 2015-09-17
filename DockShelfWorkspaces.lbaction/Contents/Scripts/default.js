@@ -6,20 +6,22 @@ function run() {
 function runWithString(argument) {
 	var results = [];
 	var loop = 0;
-	var ws = LaunchBar.execute("/usr/libexec/PlistBuddy", "-c", "Print workspaces:system.objects:"+ loop +":title", "/Users/" + LaunchBar.userName + "/Library/DockShelf/workspaces.dsworkspaces");
-	do {
+	LaunchBar.openURL("dockshelf://dump");
+	var spaces = File.readText("/Users/" + LaunchBar.userName + "/Library/DockShelf/workspaces_dump.txt").replace(/\"/g,"");
+	spaces = spaces.split(",");
+	for (var i=0;i<spaces.length;i++) {
+		var space = spaces[i].trim();
 		results.push({
-			title: ws,
+			title: space,
 			subtitle: "DockShelf Workspace Selection",
 			icon: "icon.png",
 			action: 'gotoWorkSpace',
-			actionArgument: ws.trim(),
+			actionArgument: space,
 			actionRunsInBackground: true,
 			actionReturnsItems: false
 		});
 		loop++;
-		ws = LaunchBar.execute("/usr/libexec/PlistBuddy", "-c", "Print workspaces:system.objects:"+ loop +":title", "/Users/" + LaunchBar.userName + "/Library/DockShelf/workspaces.dsworkspaces");
-	} while(ws != ""); 
+	}
 	return results;
 }
 

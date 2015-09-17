@@ -8,6 +8,8 @@
 	<string>com.customct.LaunchBar.action.DockShelfWorkspaces</string>
 	<key>CFBundleName</key>
 	<string>DockShelf Workspaces</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
 	<key>LBAbbreviation</key>
 	<string>dsws</string>
 	<key>LBDescription</key>
@@ -16,15 +18,35 @@
 		<string>Richard Guay</string>
 		<key>LBEmail</key>
 		<string>raguay@customct.com</string>
+		<key>LBSummary</key>
+		<string>Allows for switching DockShelf Workspaces.</string>
 		<key>LBTwitter</key>
 		<string>@CustomComputerT</string>
 		<key>LBWebsite</key>
 		<string>customct.com</string>
+		<key>LBUpdateURL</key>
+		<string>https://github.com/raguay/MyLaunchBarActions/blob/master/DockShelfWorkspaces.lbaction/Contents/Info.plist</string>
+		<key>LBDownloadURL</key>
+		<string>https://db.tt/OrYyywew</string>
+		<key>LBChangelog</key>
+		<string>
+			1.1: Added new indexing method and updateability
+			1.0: Initial Release
+		</string>
 	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6</integer>
 	<key>LBRequiredApplication</key>
 	<string>com.alchemistguild.DockShelf</string>
 	<key>LBScripts</key>
 	<dict>
+		<key>LBActionURLScript</key>
+		<dict>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBScriptName</key>
+			<string>actionURL.js</string>
+		</dict>
 		<key>LBDefaultScript</key>
 		<dict>
 			<key>LBAcceptedArgumentTypes</key>
@@ -47,5 +69,7 @@
 	<string>Switch Dockshelf Workspaces</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.10</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
 </dict>
 </plist>
