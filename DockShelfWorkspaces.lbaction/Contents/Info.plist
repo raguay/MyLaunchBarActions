@@ -24,8 +24,7 @@
 		<string>@CustomComputerT</string>
 		<key>LBWebsite</key>
 		<string>customct.com</string>
-		<key>LBUpdateURL</key>
-		<string>https://raw.githubusercontent.com/raguay/MyLaunchBarActions/master/DockShelfWorkspaces.lbaction/Contents/Info.plist</string>
+		<key>LBUpdateURL</key>	<string>https://raw.githubusercontent.com/raguay/MyLaunchBarActions/master/DockShelfWorkspaces.lbaction/Contents/Info.plist</string>
 		<key>LBDownloadURL</key>
 		<string>https://db.tt/OrYyywew</string>
 		<key>LBChangelog</key>
