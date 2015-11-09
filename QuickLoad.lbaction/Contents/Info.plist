@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.customct.LaunchBar.action.QuickLoad</string>
+	<key>CFBundleName</key>
+	<string>Quick Load Latest in Directory</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBAbbreviation</key>
+	<string>l</string>
+	<key>LBArgument</key>
+	<string>none</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBArgument</key>
+		<string>none</string>
+		<key>LBAuthor</key>
+		<string>Richard Guay</string>
+		<key>LBEmail</key>
+		<string>raguay@customct.com</string>
+		<key>LBRequirements</key>
+		<string>/bin/ls</string>
+		<key>LBResult</key>
+		<string>Most recently used file loaded into LaunchBar.</string>
+		<key>LBSummary</key>
+		<string>This action will load the most recent file in the specified directory in to LaunchBar for actioning.</string>
+		<key>LBTwitter</key>
+		<string>@CustomComputerT</string>
+		<key>LBWebsite</key>
+		<string>customct.com</string>
+	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6</integer>
+	<key>LBRequirements</key>
+	<string>/bin/ls</string>
+	<key>LBResult</key>
+	<string>Most recently used file loaded into LaunchBar.</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LBTextInputTitle</key>
+	<string>Quickly Load File</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.10</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
+</dict>
+</plist>
