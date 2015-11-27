@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>QuickLoadActionLogo.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.customct.LaunchBar.action.QuickLoadOptions</string>
+	<key>CFBundleName</key>
+	<string>QuickLoad Options</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBAbbreviation</key>
+	<string>lop</string>
+	<key>LBArgument</key>
+	<string>none</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBArgument</key>
+		<string>none</string>
+		<key>LBAuthor</key>
+		<string>Richard Guay</string>
+		<key>LBEmail</key>
+		<string>raguay@customct.com</string>
+		<key>LBRequirements</key>
+		<string>/bin/ls</string>
+		<key>LBResult</key>
+		<string>Sets the .qloptions file</string>
+		<key>LBSummary</key>
+		<string>This action is for setting the options for the Quick Load Latest in Directory action.</string>
+		<key>LBTwitter</key>
+		<string>@CustomComputerT</string>
+		<key>LBWebsite</key>
+		<string>customct.com</string>
+	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6</integer>
+	<key>LBRequirements</key>
+	<string>/bin/ls</string>
+	<key>LBResult</key>
+	<string>Sets the .qloptions file</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+				<string>path</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LBTextInputTitle</key>
+	<string>Quickly Load File</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.10</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
+</dict>
+</plist>

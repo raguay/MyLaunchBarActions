@@ -3,15 +3,10 @@
 //
 // Description:                This action script gets
 //				 The most recently modified
-//				file in the directory interested
-//				in and sends it to LaunchBar
-//				for actioning.
+//				 file in the directory interested
+//				 in and sends it to LaunchBar
+//				 for actioning.
 //
-
-//
-// The base directory in the user's home to search.
-//
-searchDir = "/Downloads/"
 
 //
 // Function:        run
@@ -27,17 +22,39 @@ function run(argument) {
 	//
 	// Get the full path to the directory to check.
 	//
-	var dirFull = LaunchBar.homeDirectory + searchDir;
+	var listFlag = "U";
+	var searchDir = LaunchBar.homeDirectory + "/Downloads/";
+	var orderNum = 1;
+
+	//
+	// Get the user specified list flag.
+	//
+	listFlagFile = LaunchBar.homeDirectory + "/.qloptions";
+	if (File.exists(listFlagFile)) {
+		var options = File.readJSON(listFlagFile);
+		listFlag = options.flags;
+		searchDir = options.dir;
+		orderNum = options.orderNum;
+ 	}
 
 	//
 	// List the directory getting the most recently
 	// modified file.
 	//
-	var uri = dirFull + LaunchBar.execute("/bin/ls",  "-tU1", dirFull).split('\n')[0];
+	var uri = LaunchBar.execute("/bin/ls",  "-1t" + listFlag, searchDir).split('\n');
+
+	//
+	// Make sure we are not going out of the bounds and is
+	// a non-empty element.
+	//
+	if(uri.length < orderNum)
+		orderNum = uri.length;
+	if(uri[orderNum-1] == "")
+		orderNum = orderNum - 1;
 
 	//
 	// Sent it to the LaunchBar using a
 	// command URL
 	//
-	LaunchBar.openCommandURL('x-launchbar:select?file=' + uri);
+	LaunchBar.openCommandURL('x-launchbar:select?file=' + searchDir + "/" + uri[orderNum - 1]);
 }

@@ -3,10 +3,14 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
-Quick Load
+Quick Load and Quick Load Options
 ---
 
 This action finds the most recently modified/created file in the Downloads directory and loads it into LaunchBar. You can the action it with any program you want. If you want a different directory, simply change the name of the directory in the user's home directory in the variable "searchDir".
+
+The Quick Load Options allow you to change the directory being searched by sending a new directory to this action. By running the action (Abbreviation is set to 'lop'), you can set the sort type (by last modified or by last added to the directory) and the order number (Most recent, second most recent, etc.). If you set it to the 5th most recent, but there are only two items, it will correctly get the last item.
+
+The Quick Load action uses the users Download directory, first most recent file, and sort by last modified as the defaults.
 
 DockShelf.app
 ---
