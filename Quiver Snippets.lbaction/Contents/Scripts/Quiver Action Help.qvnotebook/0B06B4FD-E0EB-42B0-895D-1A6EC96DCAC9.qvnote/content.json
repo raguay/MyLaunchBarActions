@@ -1,0 +1,25 @@
+{
+  "title": "5 - Handerbar Constants and Helpers",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## Helper Functions\n\nThe four helper functions I defined are: **save**, **clipboard**, **cdate**, and **date**. All normal **[Handlebars](http://handlebarsjs.com/)** helper functions are usable as well. This is not a complete guide to using **Handlebars**.\n\nAll **Handlebars** macros can be rapped in `{{ }}` for HTML escaping of characters, or `{{{ }}}` for raw outputing.\n\nThe **save** helper takes two parameters in quotation marks: the _name_ and the _value_. A new helper is then created with the _name_ that will produce the _value_. The helper also returns the value to be placed in it's place. From that point on, all macros that use the _name_ will be replaced with the _value_."
+    },
+    {
+      "type": "markdown",
+      "data": "The **clipboard** helper will be replaced with the current contents of the clipboard."
+    },
+    {
+      "type": "markdown",
+      "data": "The **date** helper will be replaced with the current date formated by the **[Moment.js](http://momentjs.com/docs/#/parsing/string-format/)** formatting variables given as the argument.\n\nThe **cdate** helper will be replaced with the date/time specifed by the first argument and the **Moment.js** formatting as the second argument. The date/time format has to follow **2013-02-08 24:00:00.000** format."
+    },
+    {
+      "type": "markdown",
+      "data": "## Predefined Macros\n\nThe following are the predefined macros for **Handlebars**:\n\n| Macro          | Moment Format |\n|----------------|---------------|\n| cDateMDY       | MMMM DD, YYYY |\n| cDateDMY       | DD MMMM YYYY |\n| cDateDOWDMY    | dddd, DD MMMM YYYY |\n| cDateDOWMDY    | dddd MMMM DD, YYYY |\n| cDay           | DD |\n| cMonth         | MMMM |\n| cYear          | YYYY |\n| cMonthShort    | MMM |\n| cYearShort     | YY |\n| cDOW           | dddd |\n| cMDthYShort    | MMM Do YY |\n| cMDthY         | MMMM Do YYYY |\n| cHMSampm       | h:mm:ss a |\n| cHMampm        | h:mm a |\n| cHMS24         | H:mm:ss |\n| cHM24          | H:mm |\n\n"
+    },
+    {
+      "type": "markdown",
+      "data": "**Note**: The \"Macro Test\" snippet in the default snippets notebook gives an example of many of these macros. I used it to test the special macros, but you can see how they are used for your own snippets.\n"
+    }
+  ]
+}

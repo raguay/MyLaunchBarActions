@@ -3,6 +3,11 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+Quiver Snippets
+---
+
+This action allows you to create and manage snippets in the **[Quiver](http://happenapps.com/#quiver)** application. When you load the action, send either your Quiver Library file or a shared Snippets notebook file to the action. That will configure the action and give you the option of loaded the Default note and the sample snippets. It also allows you to load the help files in to **Quiver**. Please refer to the help file for more information.
+
 Quick Load and Quick Load Options
 ---
 

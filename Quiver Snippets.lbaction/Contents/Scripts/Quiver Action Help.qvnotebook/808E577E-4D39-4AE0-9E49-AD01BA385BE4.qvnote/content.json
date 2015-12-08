@@ -1,0 +1,9 @@
+{
+  "title": "1 - Introduction",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Thanks for using the Quiver Workflow for **[LaunchBar 6](https://www.obdev.at/products/launchbar/index.html)**. This action is a work in progress as I am continually adding new features. If there is a feature you would like me to add, please let me know at [raguay@customct.com](mailto:raguay@customct.com).\n\nThe main feature is the Template Expander using the Snippets notebook. With this, you can create **[Handlebars](http://handlebarsjs.com/)** based templates and paste them to your writing application.\n\nTo use this workflow, please follow the **[Installation](quiver-note-url/67A07EFE-F8D2-45D8-B095-D71EC98D0727)** instructions first."
+    }
+  ]
+}

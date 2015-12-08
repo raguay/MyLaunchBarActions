@@ -1,0 +1,9 @@
+{
+  "title": "6 - Expanding the Snippets",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "To expand a snippet, type \"qs\" in **Launchbar** and select the **Quiver Snippet Action**. A list of snippet titles will be displayed. Select the snippet you want and it will be pasted in to your topmost application.\n\nIf you want to use a different abbreviation, then simply change the default abbreviation in the **Script Editor** or train **LaunchBar** to use a different one."
+    }
+  ]
+}

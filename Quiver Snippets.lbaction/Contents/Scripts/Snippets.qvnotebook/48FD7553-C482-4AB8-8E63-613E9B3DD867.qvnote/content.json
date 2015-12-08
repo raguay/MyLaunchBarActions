@@ -1,0 +1,64 @@
+{
+  "title": "Macro Tests",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "This snippet is for testing the different special macros defined in this **[Handlebars](http://handlebarsjs.com/)** installation and different **[TextExpander](https://smilesoftware.com/textexpander)** macros as well. It also tests the ability to split up the snippet and have locally defined data for expansion.\n\nNotice that all the non-**code** cells are complete ignored and only code cells marked as **handlebars** or **json** are used."
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "This is a test snippet. The current date is: {{cDateMDY}}.\n\nI will now save the name of the workflow into a **Handlebars** variable:  {{save \"name\" \"Quiver Workflow for Alfred\"}}.\n\nNow, to check that it saved correctly, here it is again: {{name}}.\n"
+    },
+    {
+      "type": "markdown",
+      "data": "The next section will place the cusor to the location with %| if ran through the TextExpander command."
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "The cursor will end up here: %|\n"
+    },
+    {
+      "type": "markdown",
+      "data": "The next section test the cYear and date macros."
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "The current year is {{cYear}}. The current month using the date macro is: {{date \"MMMM\"}}.\n"
+    },
+    {
+      "type": "markdown",
+      "data": "The next section tests the clipboard macro."
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "The clipboard contents are:  {{{clipboard}}}.\n"
+    },
+    {
+      "type": "markdown",
+      "data": "The next section tests the cdate macro."
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "The day of the week for June 13, 1964 is {{cdate \"1964-06-13\" \"dddd\"}}.\n"
+    },
+    {
+      "type": "markdown",
+      "data": "Now, create a data structure to add to the next snippet."
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "{\n   \"myTest\": \"This is a test phrase.\"\n}"
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "This is a test:  {{myTest}}\n"
+    }
+  ]
+}

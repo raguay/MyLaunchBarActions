@@ -1,0 +1,14 @@
+{
+  "title": "Office Address",
+  "cells": [
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "{{firstName}} {{lastName}}\n{{office.address1}}\n{{#if office.address2}}\n{{office.address2}}\n{{/if}}\n{{office.city}}, {{office.state}} {{office.zip}}"
+    },
+    {
+      "type": "markdown",
+      "data": "This template is a simple address expander for the office address. This template will use the \"office\" structure in the Defaults data."
+    }
+  ]
+}

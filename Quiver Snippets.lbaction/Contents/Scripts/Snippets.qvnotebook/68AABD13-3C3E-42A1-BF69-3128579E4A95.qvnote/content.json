@@ -1,0 +1,14 @@
+{
+  "title": "Home Address",
+  "cells": [
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "{{firstName}} {{lastName}}\n{{home.address1}}\n{{#if home.address2}}\n{{home.address2}}\n{{/if}}\n{{home.city}}, {{home.state}} {{home.zip}}"
+    },
+    {
+      "type": "markdown",
+      "data": "This template is a simple address expander for the home address. This template will use the **home** structure in the Defaults data."
+    }
+  ]
+}

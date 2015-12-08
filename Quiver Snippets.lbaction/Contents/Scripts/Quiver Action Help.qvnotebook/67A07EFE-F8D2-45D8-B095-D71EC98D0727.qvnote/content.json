@@ -1,0 +1,9 @@
+{
+  "title": "2 - Installation",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "The first step is to send the Quiver Library or the Snippet Notebook that is shared to this action. This will setup the default variables and load the help file and Snippets notebooks. You are ready to create and use snippets!\n\nIf you loaded the default Snippets, then you need to personalize them and fix the data in the Defaults note to fit your needs."
+    }
+  ]
+}

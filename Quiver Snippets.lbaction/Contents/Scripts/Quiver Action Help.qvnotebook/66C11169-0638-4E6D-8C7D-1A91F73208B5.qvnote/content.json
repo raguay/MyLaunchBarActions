@@ -1,0 +1,13 @@
+{
+  "title": "4 - Creating Snippets",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "To create a snippet, go to the **Snippet** notebook and create a note. All cells that are designated as **code** and **handlebars** will be combined together to make the template. All cells that are designated as **code** and **json** will be combined with the **Defaults** data to make the database that **Handlebars** will use to fill in the macro expansions."
+    },
+    {
+      "type": "markdown",
+      "data": "All other cell type are ignored. But, you can use them to add notes, explanations, or diagrams for the data and templates."
+    }
+  ]
+}
