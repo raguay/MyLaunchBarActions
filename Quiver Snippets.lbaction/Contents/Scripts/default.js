@@ -115,7 +115,7 @@ function processSnippet(snippetDir) {
                         //
                         // Add the JSON file to the data array.
                         //
-                        data = MergeRecursive(JSON.parse(templateJSON["cells"][i]["data"]), data);
+                        data = MergeRecursive(data,JSON.parse(templateJSON["cells"][i]["data"]));
                      }
                   }
                }
@@ -151,7 +151,7 @@ function processSnippet(snippetDir) {
                         //
                         // It is a JSON Data. Add it to the data array.
                         //
-                        data = MergeRecursive(JSON.parse(templateJSON["cells"][i]["data"]), data);
+                        data = MergeRecursive(data,JSON.parse(templateJSON["cells"][i]["data"]));
                      } else if (templateJSON["cells"][i]["language"] == "handlebars") {
                         //
                         // It is a Handlebars cell. Add it to the template.
@@ -226,7 +226,15 @@ function processSnippet(snippetDir) {
          // Parse the template to create the results and
          // return the results. This currently doesn't work.
          //
-         if(options.paste) {
+         var pasteQ = options.paste;
+         if (typeof data.expandPlain !== 'undefined') {
+            //
+            // The macro has an override for how it is
+            // to be expanded.
+            //
+            pasteQ = data.expandPlain;
+         }
+         if(pasteQ) {
             //
             // Just paste to the application.
             //
@@ -409,3 +417,5 @@ function runWithPaths(paths) {
    //
    File.writeJSON(options, listFlagFile);
 }
+
+
