@@ -4,7 +4,7 @@ MyLaunchBarActions
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
 Paste Through TextExpander
-___
+---
 
 This simple action takes a string passed to it and expands it through **[TextExpander](https://smilesoftware.com/textexpander)**. I use it with the Quiver Snippets to use **TextExpander** to place the cursor at a desired point. This action has no configurations.
 
