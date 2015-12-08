@@ -82,10 +82,11 @@ function processSnippet(snippetDir) {
    // Setup variables.
    //
    var data = [];
+   var options = {};
    var template = "";
    listFlagFile = LaunchBar.homeDirectory + "/.qvoptions";
    if (File.exists(listFlagFile)) {
-      var options = File.readJSON(listFlagFile);
+      options = File.readJSON(listFlagFile);
       var defaultsDir = options.snippetsDir + "/" + options.defaultsDir;
       try {
          //
@@ -225,18 +226,17 @@ function processSnippet(snippetDir) {
          // Parse the template to create the results and
          // return the results. This currently doesn't work.
          //
-         /*
-         LaunchBar.executeAppleScript('set theQuery to "' + tpTemplate(data) + '"',
-         'delay 1',
-         'tell application "TextExpander"',
-         ' tell group "User Testing"',
-         ' set temporarySnippet to make new snippet with properties {plain text expansion:theQuery, abbreviation:"temporary_snippet_ok_to_delete"}',
-         ' end tell',
-         ' expand snippet temporarySnippet',
-         ' delete temporarySnippet',
-         'end tell');
-         */
-         LaunchBar.paste(tpTemplate(data));
+         if(options.paste) {
+            //
+            // Just paste to the application.
+            //
+            LaunchBar.paste(tpTemplate(data));
+         } else {
+            //
+            // Paste through Text Expander.
+            //
+            LaunchBar.performAction('Paste Through TextExpander',tpTemplate(data));
+         }
       } catch (error) {
          LaunchBar.alert("There was an error: " + error);
       }
@@ -395,6 +395,14 @@ function runWithPaths(paths) {
             }
          }
       }
+   }
+   //
+   // See if they want to pass the output through TextExpander.
+   //
+   if(LaunchBar.alert("Do you want to pass output through TextExpander?","In order for this to work, you have to have the 'Pass Through TextExpander' action installed as well.","Yes","No") == 0) {
+      options.paste = false;
+   } else {
+      options.paste = true;
    }
    //
    // Write the options to the options file.

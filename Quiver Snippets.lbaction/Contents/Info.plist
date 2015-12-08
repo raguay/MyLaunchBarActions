@@ -34,14 +34,6 @@
 		<string>@CustomComputerT</string>
 		<key>LBWebsite</key>
 		<string>customct.com</string>
-		<key>LBUpdateURL</key>
-		<string></string>
-		<key>LBDownloadURL</key>
-		<string></string>
-		<key>LBChangelog</key>
-		<string>
-			1.0 - Initial Release 12/08/2015
-		</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
 	<integer>6</integer>
