@@ -5,7 +5,7 @@ function run(argument) {
       // Inform the user that there was no argument
       LaunchBar.alert('No text was passed to the action.');
    } else {
-      LaunchBar.executeAppleScript('set theQuery to "' + argument + '"',
+      LaunchBar.executeAppleScript('set theQuery to "' + fixQuotes(argument) + '"',
          'delay 1',
          'tell application "TextExpander"',
          ' tell group "User Testing"',
@@ -16,3 +16,17 @@ function run(argument) {
          'end tell');
    }
 }
+//
+// Function:         fixQuotes
+//
+// Description:      This function escapes all double and signal quates and makes
+//                   them single quotes.
+//
+// Inputs:
+//                   unsafe      String to process.
+//
+function fixQuotes(unsafe) {
+    return unsafe
+         .replace(/"/g, "\'")
+         .replace(/'/g, "\'");
+ }
