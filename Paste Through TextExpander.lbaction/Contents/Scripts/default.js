@@ -5,7 +5,19 @@ function run(argument) {
       // Inform the user that there was no argument
       LaunchBar.alert('No text was passed to the action.');
    } else {
-      LaunchBar.executeAppleScript('set theQuery to "' + fixQuotes(argument) + '"',
+/*      LaunchBar.executeAppleScript('set theQuery to "' + fixQuotes(argument) + '"',
+         'delay 1',
+         'tell application "TextExpander"',
+         ' tell group "User Testing"',
+         ' set temporarySnippet to make new snippet with properties {plain text expansion:theQuery, abbreviation:"temporary_snippet_ok_to_delete"}',
+         ' end tell',
+         ' expand snippet temporarySnippet',
+         ' delete temporarySnippet',
+         'end tell');
+         */
+      File.writeText(argument,LaunchBar.homeDirectory + "/.cliptxt");
+      LaunchBar.execute("./copy.sh",LaunchBar.homeDirectory + "/.cliptxt");
+      LaunchBar.executeAppleScript('set theQuery to (the Clipboard as text)',
          'delay 1',
          'tell application "TextExpander"',
          ' tell group "User Testing"',
