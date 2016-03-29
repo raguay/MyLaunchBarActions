@@ -9,15 +9,17 @@ Paste Through TextExpander
 This simple action takes a string passed to it and expands it through **[TextExpander](https://smilesoftware.com/textexpander)**. I use it with the Quiver Snippets to use **TextExpander** to place the cursor at a desired point. This action has no configurations.
 
 
-Quiver Snippets
+Quiver Snippets and Quiver Helper
 ---
 
-This action allows you to create and manage snippets in the **[Quiver](http://happenapps.com/#quiver)** application. When you load the action, send either your Quiver Library file or a shared Snippets notebook file to the action. That will configure the action and give you the option of loaded the Default note and the sample snippets. It also allows you to load the help files in to **Quiver**. Please refer to the help file for more information.
+The Quiver Snippets action allows you to create and manage snippets in the **[Quiver](http://happenapps.com/#quiver)** application. When you load the action, send either your Quiver Library file or a shared Snippets notebook file to the action. That will configure the action and give you the option of loaded the Default note and the sample snippets. It also allows you to load the help files into **Quiver**. Please refer to the help file for more information.
+
+The Quiver Helper action allows you use the snippets variation feature. You can not have snippet variations without this action installed. Please refer to the help files for more information.
 
 Quick Load and Quick Load Options
 ---
 
-This action finds the most recently modified/created file in the Downloads directory and loads it into LaunchBar. You can the action it with any program you want. If you want a different directory, simply change the name of the directory in the user's home directory in the variable "searchDir".
+This action finds the most recently modified/created file in the Downloads directory and loads it into LaunchBar. You can set the action it use any program you want. If you want a different directory, simply change the name of the directory in the user's home directory in the variable "searchDir".
 
 The Quick Load Options allow you to change the directory being searched by sending a new directory to this action. By running the action (Abbreviation is set to 'lop'), you can set the sort type (by last modified or by last added to the directory) and the order number (Most recent, second most recent, etc.). If you set it to the 5th most recent, but there are only two items, it will correctly get the last item.
 

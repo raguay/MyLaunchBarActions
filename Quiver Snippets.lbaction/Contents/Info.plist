@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Quiver Snippets</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>LBAbbreviation</key>
 	<string>qs</string>
 	<key>LBArgument</key>
@@ -32,7 +32,7 @@
 		<string>This action uses Quiver to store/edit snippets for Handlebar expansions.</string>
 		<key>LBTwitter</key>
 		<string>@CustomComputerT</string>
-		<key>LBWebsite</key>
+		<key>LBWebsiteURL</key>
 		<string>customct.com</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
@@ -49,6 +49,7 @@
 		<dict>
 			<key>LBAcceptedArgumentTypes</key>
 			<array>
+				<string>string</string>
 				<string>path</string>
 			</array>
 			<key>LBKeepWindowActive</key>
@@ -65,5 +66,14 @@
 	<string>10.11</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>MIT</string>
+	<key>LBUpdateURL</key>
+	<string></string>
+	<key>LBDownloadURL</key>
+	<string></string>
+	<key>LBChangelog</key>
+	<string>
+		1.2: Added variations to the snippets
+		1.0: Original Version
+	</string>
 </dict>
 </plist>
