@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>QuiverTemplateWF.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.customct.LaunchBar.action.QuiverHelper</string>
+	<key>CFBundleName</key>
+	<string>Quiver Helper</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBArgument</key>
+	<string>String of possible expansions for a snippet separated by an '|' character.</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBArgument</key>
+		<string>String of possible expansions for a snippet separated by an '|' character.</string>
+		<key>LBAuthor</key>
+		<string>Richard Guay</string>
+		<key>LBEmail</key>
+		<string>raguay@customct.com</string>
+		<key>LBRequirements</key>
+		<string>Quiver Snippets and Paste Through TextExapnder Actions</string>
+		<key>LBResult</key>
+		<string>Asks the user which one to expand and pastes the appropriate string.</string>
+		<key>LBSummary</key>
+		<string>This is a helper function for the Quiver Snippets Action.</string>
+		<key>LBTwitter</key>
+		<string>@CustomComputerT</string>
+		<key>LBWebsiteURL</key>
+		<string>customct.com</string>
+	</dict>
+	<key>LBMinimumLaunchBarVersion</key>
+	<integer>6</integer>
+	<key>LBRequiredApplication</key>
+	<string>com.happenapps.quiver</string>
+	<key>LBRequirements</key>
+	<string>Quiver Snippets and Paste Through TextExapnder Actions</string>
+	<key>LBResult</key>
+	<string>Asks the user which one to expand and pastes the appropriate string.</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
+</dict>
+</plist>
