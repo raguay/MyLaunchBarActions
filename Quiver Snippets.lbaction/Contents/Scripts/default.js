@@ -185,6 +185,13 @@ function processSnippet(snippetDir) {
                 //
                 pasteQ = data.expandPlain;
             }
+            if (typeof tdata.expandPlain !== 'undefined') {
+                //
+                // The macro has an override for how it is
+                // to be expanded.
+                //
+                pasteQ = tdata.expandPlain;
+            }
 
             if (typeof tdata["versions"] === 'undefined') {
                 data = MergeRecursive(data, tdata);

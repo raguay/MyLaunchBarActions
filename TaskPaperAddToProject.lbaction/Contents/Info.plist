@@ -3,46 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>QuiverTemplateWF.png</string>
+	<string>TaskPaperAppIcon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.customct.LaunchBar.action.QuiverSnippets</string>
+	<string>com.customct.LaunchBar.action.TaskPaperAddToProject</string>
 	<key>CFBundleName</key>
-	<string>Quiver Snippets</string>
+	<string>TaskPaper Add to Project</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.0</string>
 	<key>LBAbbreviation</key>
-	<string>qs</string>
+	<string>tpa</string>
 	<key>LBArgument</key>
-	<string>Snippet Name</string>
-	<key>LBDebugLogEnabled</key>
-	<true/>
+	<string></string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBArgument</key>
-		<string>Snippet Name</string>
+		<string></string>
 		<key>LBAuthor</key>
 		<string>Richard Guay</string>
 		<key>LBEmail</key>
 		<string>raguay@customct.com</string>
-		<key>LBRequirements</key>
-		<string>Quiver.app</string>
 		<key>LBResult</key>
-		<string>Snippet</string>
+		<string>Adds a message to a project in TaskPaper</string>
 		<key>LBSummary</key>
-		<string>This action uses Quiver to store/edit snippets for Handlebar expansions.</string>
+		<string>This allows for adding items to a particular project in a selected TaskPaper file.</string>
 		<key>LBTwitter</key>
 		<string>@CustomComputerT</string>
 		<key>LBWebsiteURL</key>
-		<string>customct.com</string>
+		<string>http://customct.com</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
 	<integer>6</integer>
 	<key>LBRequiredApplication</key>
-	<string>com.happenapps.quiver</string>
-	<key>LBRequirements</key>
-	<string>Quiver.app</string>
+	<string>com.hogbaysoftware.TaskPaper3</string>
 	<key>LBResult</key>
-	<string>Snippet</string>
+	<string>Adds a message to a project in TaskPaper</string>
 	<key>LBScripts</key>
 	<dict>
 		<key>LBDefaultScript</key>
@@ -50,9 +44,12 @@
 			<key>LBAcceptedArgumentTypes</key>
 			<array>
 				<string>string</string>
-				<string>path</string>
 			</array>
 			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBRequiresArgument</key>
 			<true/>
 			<key>LBResultType</key>
 			<string>unknown</string>
@@ -62,9 +59,7 @@
 			<string>default.js</string>
 		</dict>
 	</dict>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.11</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>MIT</string>
+	<key>LBTextInputTitle</key>
+	<string>tp:addtag</string>
 </dict>
 </plist>
