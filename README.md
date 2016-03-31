@@ -4,7 +4,7 @@ MyLaunchBarActions
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
 Add To TaskPaper Projects
-___
+---
 
 This action is used to add a new task to a [TaskPaper](https://www.taskpaper.com/) project. If you send a path of a TaskPaper file to this action, it stores that path to add tasks to. Otherwise, if **TaskPaper** is running while you run this action, it will get that files path, store it, and use that file.
 
