@@ -60,6 +60,6 @@
 		</dict>
 	</dict>
 	<key>LBTextInputTitle</key>
-	<string>tp:addtag</string>
+	<string>tp:addProject</string>
 </dict>
 </plist>

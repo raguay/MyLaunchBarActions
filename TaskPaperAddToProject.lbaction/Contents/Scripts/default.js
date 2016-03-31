@@ -29,7 +29,10 @@ function run(string) {
     // Create variables that will be used.
     //
     var result = [];
-    string = string.trim();
+    if(typeof(string) == "string")
+        string = string.trim();
+    else
+        string = "";
 
     //
     // Get a list of tags from the current document.
@@ -93,6 +96,16 @@ function getProjectsFromDocument() {
 //                the text to be added.
 //
 function addToProject(projectString) {
+    //
+    // For some reason, the Launchbar will not
+    // disappear without this. But, this will not
+    // paste anything eiter.
+    //
+    LaunchBar.paste("");
+
+    //
+    // Find the Project's location in the file.
+    //
     var parts = projectString.split("|");
     var pFile = getCurrentFileOrDefault();
     if (File.exists(pFile)) {
@@ -105,7 +118,15 @@ function addToProject(projectString) {
                 }
             }
         });
+
+        //
+        // Add the new item.
+        //
         var result = tFile.slice(0, index + 1).join('\n') + "\n\t- " + parts[1] + "\n" + tFile.slice(index + 1).join('\n');
+
+        //
+        // Save the file.
+        //
         File.writeText(result, pFile);
     }
 }
