@@ -79,8 +79,9 @@ function getProjectsFromDocument() {
     if (File.exists(pFile)) {
         var tFile = File.readText(pFile).split('\n');
         tFile.forEach(function(element, index, array) {
-            if (element.endsWith(":")) {
-                result += element.substr(0, element.length - 1) + ", ";
+            element = element.trim();
+            if ((element.indexOf(":") > 0)&&(element[0] != '-')) {
+                result += element.substr(0, element.indexOf(':')) + ", ";
             }
         });
     }
@@ -111,8 +112,9 @@ function addToProject(projectString) {
     if (File.exists(pFile)) {
         var tFile = File.readText(pFile).split('\n');
         var index = tFile.findIndex(function(element, index, array) {
-            if (element.endsWith(":")) {
-                project = element.substr(0, element.length - 1);
+            element = element.trim();
+            if ((element.indexOf(":") > 0)&&(element[0] != '-')) {
+                project = element.substr(0, element.indexOf(':'));
                 if (project == parts[0]) {
                     return (true);
                 }
