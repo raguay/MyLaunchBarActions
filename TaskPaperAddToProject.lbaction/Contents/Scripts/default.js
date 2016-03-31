@@ -37,7 +37,13 @@ function run(string) {
     //
     // Get a list of tags from the current document.
     //
-    var tags = getProjectsFromDocument().split(",");
+    var tags = getProjectsFromDocument();
+    if(tags == "") {
+        LaunchBar.alert("Please specify the project file or have TaskPaper open to the project file before using.");
+        exit(0);
+    } else {
+        tags = tags.split(",");
+    }
 
     //
     // This function should be called to produce a new list. Create it.
@@ -76,16 +82,17 @@ function run(string) {
 function getProjectsFromDocument() {
     var result = "";
     var pFile = getCurrentFileOrDefault();
-    if (File.exists(pFile)) {
+    if ((pFile != "") && (File.exists(pFile))) {
         var tFile = File.readText(pFile).split('\n');
         tFile.forEach(function(element, index, array) {
-            element = element.trim();
-            if ((element.indexOf(":") > 0)&&(element[0] != '-')) {
+            if (element.match(/^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i)) {
                 result += element.substr(0, element.indexOf(':')) + ", ";
             }
         });
+        return (result.substr(0, result.length - 2));
+    } else {
+        return ("");
     }
-    return (result.substr(0, result.length - 2));
 }
 
 //
@@ -109,11 +116,10 @@ function addToProject(projectString) {
     //
     var parts = projectString.split("|");
     var pFile = getCurrentFileOrDefault();
-    if (File.exists(pFile)) {
+    if ((pFile != "") && (File.exists(pFile))) {
         var tFile = File.readText(pFile).split('\n');
         var index = tFile.findIndex(function(element, index, array) {
-            element = element.trim();
-            if ((element.indexOf(":") > 0)&&(element[0] != '-')) {
+            if (element.match(/^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i)) {
                 project = element.substr(0, element.indexOf(':'));
                 if (project == parts[0]) {
                     return (true);
@@ -152,7 +158,8 @@ function getCurrentFileOrDefault() {
         '	return ""',
         'end if').trim();
     if (pFile == "") {
-        pFile = File.readText(LaunchBar.homeDirectory + "/.tpProjectFile");
+        if(File.exists(LaunchBar.homeDirectory + "/.tpProjectFile"))
+            pFile = File.readText(LaunchBar.homeDirectory + "/.tpProjectFile");
     } else {
         //
         // Save the path to the ~/.tpProjectFile location.
