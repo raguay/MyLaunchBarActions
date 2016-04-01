@@ -1,4 +1,11 @@
 //
+// Globals:
+//
+//             pReg         Regular expression for finding projects.
+//
+var pReg = /^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i;
+
+//
 // Function:         runWithPaths (paths)
 //
 // Description:      This function is called by Launchbar with a path
@@ -85,7 +92,7 @@ function getProjectsFromDocument() {
     if ((pFile != "") && (File.exists(pFile))) {
         var tFile = File.readText(pFile).split('\n');
         tFile.forEach(function(element, index, array) {
-            if (element.match(/^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i)) {
+            if (element.match(pReg)) {
                 result += element.substr(0, element.indexOf(':')) + ", ";
             }
         });
@@ -119,7 +126,7 @@ function addToProject(projectString) {
     if ((pFile != "") && (File.exists(pFile))) {
         var tFile = File.readText(pFile).split('\n');
         var index = tFile.findIndex(function(element, index, array) {
-            if (element.match(/^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i)) {
+            if (element.match(pReg)) {
                 project = element.substr(0, element.indexOf(':'));
                 if (project == parts[0]) {
                     return (true);
