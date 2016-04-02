@@ -3,6 +3,15 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+List Processor and List Processor - Options
+---
+
+These two actions work together. The List Processor - Options allows you to set the different options for the action. The separator is a character that you want to use to separate the list into different parts. The position is the location in the list for the next retrieval. The forward options tells if the next call will progress forwards in the list or backwards.
+
+By quick sending (cmd-space held until the selection is copied into LaunchBar. Then press tab.) to the List Processor action, you can set the string to be processed. Then just run the List Processor action without a string gets the next item in the list.
+
+This is very handy for sequencing through a list of items.
+
 Add To TaskPaper Projects
 ---
 
