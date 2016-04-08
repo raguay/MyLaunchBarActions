@@ -1,0 +1,22 @@
+{
+  "title": "3 - The Default Snippet",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "The **Default** snippet isn't a snippet, but a **json** data structure that will be loaded into **Handlebars** for every expansion. This \"snippet\" will never show up in the list of snippets for expansion. Therefore, you can define globally used data that is inserted into your snippets. \n\nSince you can cut/paste individual cells really easily, you can create a notebook of different data sets, and cut and paste fragments from that notebook to the **Defaults** note. All **code** cells set to **json** will be pulled into the expansion. Any other cell types will be ignored.\n\nThe **expandPlain** variable has a special meaning. If this variable is set to true, then the snippet will be pasted normally. Otherwise, either **[TextExpander](https://smilesoftware.com/textexpander)** or **[Keyboard Maestro](http://www.keyboardmaestro.com/main/)** will be used to further expand the snippet and place it in the top most application. If the variable **expander** is set to 1, then **TextExpander** is used. If the variable **expander** is set to 2, then Keyboard Maestro will be used.  If these variables are set in the **Defaults** section, then that will be the default expansion style. This can also be set in each snippet to over-ride the **Defaults** setting.\n\n**JSON** structure can be split up among many cells. They will be imported and added to the main structure. Any data redefined by a cell lower than the cell originally defined in will over-write the original definition in the final data structure.\n\nAny **code** cells with a **json** data structure in a **snippet** will also be added to the main data structure and will override whatever is loaded from the **Defaults** data structure."
+    },
+    {
+      "type": "markdown",
+      "data": "If you have a **JavaScript** cell in the **Defaults** notebook, it will be loaded as an extension. You have to format as:"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "function myHandlebar(Handlebars,moment) {\n   // Your extension code.\n}\nmyHandlebar"
+    },
+    {
+      "type": "markdown",
+      "data": "You add the **Handlebar** helper functions by calling `Handlebars.registerHelper()` with the name of the helper and a function to perform the action. Please refer to the **[Handlebars Website](http://handlebarsjs.com/)** for more information."
+    }
+  ]
+}

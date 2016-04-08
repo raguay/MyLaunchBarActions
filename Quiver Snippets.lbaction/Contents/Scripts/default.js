@@ -115,6 +115,14 @@ function processSnippet(snippetDir) {
                                 // Add the JSON file to the data array.
                                 //
                                 data = MergeRecursive(data, JSON.parse(templateJSON["cells"][i]["data"]));
+                            } else if (templateJSON["cells"][i]["language"] == "javascript") {
+                                //
+                                // It is a javascript cell. Load it as a
+                                // function.
+                                //
+                                script = templateJSON["cells"][i]["data"];
+                                script = eval(script);
+                                script(Handlebars,moment);
                             }
                         }
                     }
@@ -206,16 +214,22 @@ function processSnippet(snippetDir) {
                     //
                     // Paste through Text Expander.
                     //
-                    LaunchBar.performAction('Paste Through TextExpander', result);
+                    if(data.exander == 1)
+                        LaunchBar.performAction('Paste Through TextExpander', result);
+                    else if(data.expander == 2)
+                        LaunchBar.performAction('Paste Through KeyboardMaestro', result);
                 }
             } else {
                 //
                 // This macro has versions. Let the user choose which
                 // version to expand.
                 //
-                var result = "true|";
+                var result = "0|";
                 if(pasteQ)
-                	result = "false|";
+                    if(data.expander == 1)
+                    	result = "1|";
+                    else
+                        result = "2|";
                 tdata["versions"].forEach(function(element, index) {
                     data = MergeRecursive(data, element);
                     var tResult = expandData(data, template);
@@ -269,11 +283,15 @@ function expandData(data, template) {
 
     Handlebars.registerHelper('date', function(dFormat) {
         return moment().format(dFormat);
-    })
+    });
 
     Handlebars.registerHelper('cdate', function(cTime, dFormat) {
         return moment(cTime).format(dFormat);
-    })
+    });
+
+    Handlebars.registerHelper('next', function (weeks, dow, fmat) {
+        return moment().add(7*weeks,'d').day(dow).format(fmat);
+    });
 
     //
     // Parse the Template

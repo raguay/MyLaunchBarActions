@@ -3,7 +3,7 @@
   "cells": [
     {
       "type": "markdown",
-      "data": "The first step is to send the Quiver Library or the Snippet Notebook that is shared to this action. This will setup the default variables and load the help file and Snippets notebooks. You are ready to create and use snippets!\n\nIf you loaded the default Snippets, then you need to personalize them and fix the data in the Defaults note to fit your needs."
+      "data": "The first step is to send the Quiver Library or the Snippet Notebook that is shared to this action. This will setup the default variables and load the help file and Snippets notebooks. You are ready to create and use snippets!\n\nIf you loaded the default Snippets, then you need to personalize them and fix the data in the Defaults note to fit your needs.\n\nIf you have **[TextExpander](https://smilesoftware.com/textexpander)** and would like to pass your snippets through it, you need to also install the **Paste Through TextExpander** action from the same source as the **Quiver Snippets**.\n\nIf you have **[Keyboard Maestro]()** and would like to pass your snippets through it, you need to also install **Paste Throught KeyboardMaestro** action from the same source as the **Quiver Snippets**. \n\nOnce the **Paste Through KeyboardMaestro** action is loaded, you must run it without any text passing to it for it to load the macro file. It will load a macro called **Paste From Alfred**. I use the same macro with my **Alfred** workflow.\n\nCurrently, it only supports the cursor placement macro:  %|"
     }
   ]
 }

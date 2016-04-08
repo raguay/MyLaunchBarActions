@@ -25,15 +25,22 @@ function run(argument) {
         //
         var results = [];
         var parts = argument.split("|");
-        var action = 'pasteSnippetNormal';
+        var action = "";
 
-        //
-        // The first item will be 'true' if it should be pasted into the
-        // application normally. Otherwise, it should be pasted by
-        // TextExpander.
-        //
-        if (parts[0] == "false")
-            action = 'pasteSnippetTextExpander';
+        switch(parts[0]) {
+            case "0":
+                action = "pasteSnippetNormal";
+                break;
+
+            case "1":
+                action = "pasteSnippetTextExpander";
+                break;
+
+            case "2":
+                action = "pasteSnippetKeyboardMaestro";
+                break;
+
+        }
 
         //
         // Trim the array down to not have the first element.
@@ -89,4 +96,20 @@ function pasteSnippetTextExpander(argument) {
     // Paste through Text Expander.
     //
     LaunchBar.performAction('Paste Through TextExpander', argument);
+}
+
+//
+// Function:         pasteSnippetKeyboardMaestro
+//
+// Description:      This function will paste the given string using
+//                     TextExpander.
+//
+// Inputs:
+//                     argument         The string to paste.
+//
+function pasteSnippetKeyboardMaestro(argument) {
+    //
+    // Paste through Text Expander.
+    //
+    LaunchBar.performAction('Paste Through KeyboardMaestro', argument);
 }

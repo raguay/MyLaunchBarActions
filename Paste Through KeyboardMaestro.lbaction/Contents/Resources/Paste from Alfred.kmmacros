@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>0.0</real>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%CurrentClipboard%</string>
+						<key>Variable</key>
+						<string>tmp</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IncludeStdErr</key>
+						<true/>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>var appKM = Application("Keyboard Maestro Engine")
+		
+var oVars = appKM.variables;
+
+var clip = oVars["tmp"].value();
+
+var parts = clip.split('%|');
+
+var back = 0;
+
+if(parts.length &gt; 1) {
+	back = parts[1].length;
+	clip = parts[0] + parts[1];   
+}
+
+oVars["tmp"].value = back.toString();
+clip;
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>KeyCode</key>
+								<integer>123</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>0</integer>
+								<key>ReleaseAll</key>
+								<false/>
+							</dict>
+						</array>
+						<key>CountExpression</key>
+						<string>tmp</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Repeat</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>0.0</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>481705083.33785802</real>
+				<key>Name</key>
+				<string>Paste from Alfred</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>35</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>2816</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>0042D052-2F5F-4DBB-847C-3B479275CA7A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Alfred Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>AA6C84DD-CD22-41E4-A34D-A9C3880E0C1D</string>
+		<key>UID</key>
+		<string>1E01B8C2-549F-472E-9D65-DF6EA80323BC</string>
+	</dict>
+</array>
+</plist>

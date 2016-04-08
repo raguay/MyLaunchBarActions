@@ -1,0 +1,23 @@
+{
+  "title": "Defaults",
+  "cells": [
+    {
+      "type": "code",
+      "language": "json",
+      "data": "{\n   \"projectName\": \"Name of a project\",\n   \"email\": \"Your Name <name@misc.com>\",\n   \"firstName\": \"First\",\n   \"lastName\": \"Last\",\n   \"home\": {\n      \"address1\": \"Address1\",\n      \"address2\": \"Address2\",\n      \"city\": \"City\",\n      \"state\": \"State\",\n      \"zip\": \"Zip\"\n   },\n   \"office\": {\n      \"address1\": \"Address1\",\n      \"address2\": \"Address2\",\n      \"city\": \"City\",\n      \"state\": \"State\",\n      \"zip\": \"Zip\"\n   }\n}"
+    },
+    {
+      "type": "markdown",
+      "data": "This is the Defaults data used in expanding all of the templates in the Snippets notebook. You can create more than one **code** cell set to the **json** language. All **code** cells with a **json** language indicator will be combined both here in the Defaults and the snippet being expanded to create the final data structure in the expansion of the **Handlebars** template."
+    },
+    {
+      "type": "markdown",
+      "data": "You can also specify **JavaScript** cells in **Quiver** to have customizing code for the template engine. An example is below:"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "//\n// Function:         loadUserDefinedHelpers(Handlebars,moment,data)\n//\n// Description:      This function is called by the main routine\n// \t\t\t\t\t\tto add user defined functions. The Handlebars\n//                   and moment objects are the corresponding\n//                   libraries already loaded. The user can expand\n//                   the HandleBar's helper functions with it. \n//\n// Inputs:\n//\t\t\t\t\t\t\tHandlebars\t\tThe HandleBar templater object\n//\t\t\t\t\t\t\tmoment \t\t\tThe moment object\n//\nfunction myHandlebar(Handlebars,moment) {\n\t//\n\t// An example of creating a new helper function. If you\n\t// have {{foo \"test\"}} in a snippet, it will expand \n\t// to \"bar: test\".\n\t//\n\tHandlebars.registerHelper('foo', function(msg) {\n\t\treturn \"bar: \" + msg;\n\t});\n\n\t//\n\t// An example of using the Moment.js library to create a\n\t// helper that will give the date of one week in the future.\n\t//\n\tHandlebars.registerHelper('nextWeek', function() {\n\t\treturn moment().add(1, 'w').format(\"dddd, MMMM Do YYYY\");\n\t});\n}\n\nmyHandlebar"
+    }
+  ]
+}

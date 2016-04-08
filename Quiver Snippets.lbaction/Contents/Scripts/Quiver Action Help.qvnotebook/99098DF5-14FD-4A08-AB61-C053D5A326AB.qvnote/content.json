@@ -1,9 +1,0 @@
-{
-  "title": "3 - The Default Snippet",
-  "cells": [
-    {
-      "type": "markdown",
-      "data": "The **Default** snippet isn't a snippet, but a **json** data structure that will be loaded into **Handlebars** for every expansion. This \"snippet\" will never show up in the list of snippets for expansion. Therefore, you can define globally used data that is inserted into your snippets. \n\nSince you can cut/paste individual cells really easily, you can create a notebook of different data sets, and cut and paste fragments from that notebook to the **Defaults** note. All **code** cells set to **json** will be pulled into the expansion. Any other cell types will be ignored.\n\nAlso, you can split up the **JSON** structure among many cells. They will be imported and added to the main structure. Any data redefined by a cell lower than the original one will be over-written.\n\nAny **code** cells with a **json** data structure in a snippet note will also be added to the main data structure and will override whatever is loaded from the **Defaults** data structure."
-    }
-  ]
-}

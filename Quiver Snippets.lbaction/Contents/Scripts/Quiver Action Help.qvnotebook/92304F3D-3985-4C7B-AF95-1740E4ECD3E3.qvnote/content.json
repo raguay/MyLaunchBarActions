@@ -1,0 +1,39 @@
+{
+  "title": "4 - Creating Snippets",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "To create a snippet, go to the **Snippet** notebook and create a note. All cells that are designated as **code** and **handlebars** will be combined together to make the template. All cells that are designated as **code** and **json** will be combined with the **Defaults** data to make the database that **Handlebars** will use to fill in the macro expansions."
+    },
+    {
+      "type": "markdown",
+      "data": "All other cell types are ignored. But, you can use them to add notes, explanations, or diagrams for the data and templates."
+    },
+    {
+      "type": "markdown",
+      "data": "If you create a snippet with a data structure containing the keyword **versions**, then that snippet will be expanded and the variations sent to the user to pick. An example would be as follows:"
+    },
+    {
+      "type": "markdown",
+      "data": "This is the template:"
+    },
+    {
+      "type": "code",
+      "language": "handlebars",
+      "data": "My email:  {{email}}"
+    },
+    {
+      "type": "markdown",
+      "data": "This is the JSON data structure for doing versions:"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "{\n   \"versions\": [\n      {\n         \"name\": \"First Email\",\n         \"email\": \"first@email.com\"\n      },\n      {\n         \"name\": \"Second Email\",\n         \"email\": \"second@email.com\"\n      },\n      {\n         \"name\": \"Third Email\",\n         \"email\": \"third@email.com\"\n      }\n   ]\n}"
+    },
+    {
+      "type": "markdown",
+      "data": "The **name** in each version will be shown to the user for picking the version to insert. Therefore, the **name** variable has to be set for each version. All the versions variables are used to expand the snippet.  For example, if the user chooses the \"First Email\", then the phrase \"My email: first@email.com\" will be inserted."
+    }
+  ]
+}

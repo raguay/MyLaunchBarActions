@@ -15,6 +15,10 @@
     },
     {
       "type": "markdown",
+      "data": "The **next** helper will be replaced with the date/time relative to the current date/time. It takes three arguments: **weeks**, **dow**, **fmat**. The weeks is the relative number of weeks. Therefore, this week is 0, next week is 1, in two weeks is 2, last week is -1. The **dow** is the day of the week of that week. Therefore, **weeks** set to 1 and **dow** set to \"Sat\" will give the Saturday of next week. The **fmt** is the formatting for the date/time as specified in the **[Moment.js](http://momentjs.com/docs/)** documentation. \n\nAn example is:\n\n{{next -1 \"Mon\" \"YYYY-MM-DD\"}} will give the monday of last week in Year-Month Number-two digit day. Example straight from the clipboard is: 2016-03-28 and the day I wrote this is 04/08/2016."
+    },
+    {
+      "type": "markdown",
       "data": "## Predefined Macros\n\nThe following are the predefined macros for **Handlebars**:\n\n| Macro          | Moment Format |\n|----------------|---------------|\n| cDateMDY       | MMMM DD, YYYY |\n| cDateDMY       | DD MMMM YYYY |\n| cDateDOWDMY    | dddd, DD MMMM YYYY |\n| cDateDOWMDY    | dddd MMMM DD, YYYY |\n| cDay           | DD |\n| cMonth         | MMMM |\n| cYear          | YYYY |\n| cMonthShort    | MMM |\n| cYearShort     | YY |\n| cDOW           | dddd |\n| cMDthYShort    | MMM Do YY |\n| cMDthY         | MMMM Do YYYY |\n| cHMSampm       | h:mm:ss a |\n| cHMampm        | h:mm a |\n| cHMS24         | H:mm:ss |\n| cHM24          | H:mm |\n\n"
     },
     {
