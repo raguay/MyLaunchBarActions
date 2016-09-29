@@ -3,40 +3,48 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>TaskPaperAppIcon.icns</string>
+	<string>TaskPaper.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.customct.LaunchBar.action.TaskPaperAddToProject</string>
+	<string>com.customct.LaunchBar.action.TaskPaperAddProject</string>
 	<key>CFBundleName</key>
-	<string>TaskPaper Add to Project</string>
+	<string>TaskPaper - Add Project</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LBAbbreviation</key>
-	<string>tpa</string>
+	<string>ap</string>
 	<key>LBArgument</key>
-	<string></string>
+	<string>Task to add</string>
+	<key>LBAssociatedApplication</key>
+	<string>com.hogbaysoftware.TaskPaper3.direct</string>
+	<key>LBDebugLogEnabled</key>
+	<true/>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBArgument</key>
-		<string></string>
+		<string>Task to add</string>
 		<key>LBAuthor</key>
 		<string>Richard Guay</string>
 		<key>LBEmail</key>
 		<string>raguay@customct.com</string>
+		<key>LBRequirements</key>
+		<string>TaskPaper</string>
 		<key>LBResult</key>
-		<string>Adds a message to a project in TaskPaper</string>
+		<string>Adds task to project in TaskPaper</string>
 		<key>LBSummary</key>
-		<string>This allows for adding items to a particular project in a selected TaskPaper file.</string>
+		<string>A quick task adding routine for TaskPaper.</string>
 		<key>LBTwitter</key>
 		<string>@CustomComputerT</string>
 		<key>LBWebsiteURL</key>
-		<string>http://customct.com</string>
+		<string>customct.com</string>
 	</dict>
 	<key>LBMinimumLaunchBarVersion</key>
 	<integer>6</integer>
 	<key>LBRequiredApplication</key>
-	<string>com.hogbaysoftware.TaskPaper3</string>
+	<string>com.hogbaysoftware.TaskPaper3.direct</string>
+	<key>LBRequirements</key>
+	<string>TaskPaper</string>
 	<key>LBResult</key>
-	<string>Adds a message to a project in TaskPaper</string>
+	<string>Adds task to project in TaskPaper</string>
 	<key>LBScripts</key>
 	<dict>
 		<key>LBDefaultScript</key>
@@ -46,8 +54,6 @@
 				<string>string</string>
 			</array>
 			<key>LBKeepWindowActive</key>
-			<true/>
-			<key>LBLiveFeedbackEnabled</key>
 			<true/>
 			<key>LBRequiresArgument</key>
 			<true/>
@@ -60,6 +66,10 @@
 		</dict>
 	</dict>
 	<key>LBTextInputTitle</key>
-	<string>tp:addProject</string>
+	<string>Add to Project</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.12</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>MIT</string>
 </dict>
 </plist>

@@ -9,10 +9,10 @@ var pReg = /^\w+\s*.*[\:](\s+\@\w+[^\s]*)*$/i;
 // Function:         runWithPaths (paths)
 //
 // Description:      This function is called by Launchbar with a path
-//							is sent to the action.
+//                          is sent to the action.
 //
 // Inputs:
-//							paths 	The paths sent to the action.
+//                          paths   The paths sent to the action.
 //
 function runWithPaths(paths) {
     //
@@ -22,14 +22,14 @@ function runWithPaths(paths) {
 }
 
 //
-// Function: 		run
+// Function:        run
 //
-// Description: 	This function is called by LaunchBar whenever the action is called with a string.
-//						It creates a menu that LaunchBar will give to the user. The menu items list
-//						actual functions to call to cause an action to happen in FoldingText.
+// Description:     This function is called by LaunchBar whenever the action is called with a string.
+//                      It creates a menu that LaunchBar will give to the user. The menu items list
+//                      actual functions to call to cause an action to happen in FoldingText.
 //
 // Inputs:
-//						string 			A string given by the user.
+//                      string          A string given by the user.
 //
 function run(string) {
     //
@@ -80,11 +80,11 @@ function run(string) {
 }
 
 //
-// function: 		getProjectsFromDocument
+// function:        getProjectsFromDocument
 //
-// Description: 	This function will use an osascript to query the topmost FoldingText
-//						document for a list of tags. This list is returned to the calling
-//						routine.
+// Description:     This function will use an osascript to query the topmost FoldingText
+//                      document for a list of tags. This list is returned to the calling
+//                      routine.
 //
 function getProjectsFromDocument() {
     var result = "";
@@ -103,11 +103,11 @@ function getProjectsFromDocument() {
 }
 
 //
-// function: 		addToProject
+// function:        addToProject
 //
-// Description: 	This function will use an osascript to add a user supplied string
-//						to the first tag of the type given to the script. The information
-//						given to the script is "tag|text" where tag is a tag and text is
+// Description:     This function will use an osascript to add a user supplied string
+//                      to the first tag of the type given to the script. The information
+//                      given to the script is "tag|text" where tag is a tag and text is
 //                the text to be added.
 //
 function addToProject(projectString) {
@@ -150,19 +150,19 @@ function addToProject(projectString) {
 // Function:         getCurrentFileOrDefault
 //
 // Description:      This function will see if TaskPaper is already running. If it is, then
-// 						it will return the file it has open. Otherwise, it will return the last
-//							saved TaskPaper file location.
+//                      it will return the file it has open. Otherwise, it will return the last
+//                          saved TaskPaper file location.
 //
 // Inputs:
 //
 function getCurrentFileOrDefault() {
     var pFile = LaunchBar.executeAppleScript('if application "TaskPaper" is running then',
         'tell application id (id of application "TaskPaper")',
-        '	set a to file of the front document',
-        ' 	return POSIX path of a',
+        '   set a to file of the front document',
+        '   return POSIX path of a',
         'end tell',
         'else',
-        '	return ""',
+        '   return ""',
         'end if').trim();
     if (pFile == "") {
         if(File.exists(LaunchBar.homeDirectory + "/.tpProjectFile"))
