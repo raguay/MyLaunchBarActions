@@ -28,9 +28,9 @@ This simple action takes a string passed to it and expands it through **[TextExp
 Quiver Snippets and Quiver Helper
 ---
 
-The Quiver Snippets action allows you to create and manage snippets in the **[Quiver](http://happenapps.com/#quiver)** application. When you load the action, send either your Quiver Library file or a shared Snippets notebook file to the action. That will configure the action and give you the option of loaded the Default note and the sample snippets. It also allows you to load the help files into **Quiver**. Please refer to the help file for more information.
+The Quiver Snippets action allows you to create and manage snippets in the **[Quiver](http://happenapps.com/#quiver)** application. When you load the action, drill down to either the **Quiver library** file or a **Snippet shared notebook**, and then send that file to the action with a **Quick Send** (tab key normally) to the action. That will configure the action and give you the option of loading the Default data set and the sample snippets. It also allows you to load the help notes into **Quiver**. Please refer to the help file for more information.
 
-The Quiver Helper action allows you use the snippets variation feature. You can not have snippet variations without this action installed. Please refer to the help files for more information.
+The Quiver Helper action allows you use the snippets variation feature. You can not have snippet variations without this action installed.
 
 Quick Load and Quick Load Options
 ---
