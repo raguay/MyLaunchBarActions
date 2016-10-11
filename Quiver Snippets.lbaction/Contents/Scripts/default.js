@@ -318,46 +318,52 @@ function run(argument) {
     // Get the defaults.
     //
     var listFlagFile = LaunchBar.homeDirectory + "/.qvoptions";
-    var options = File.readJSON(listFlagFile);
-    var results = [];
-    if (argument == null) {
-        try {
-            var dc = File.getDirectoryContents(options.snippetsDir);
-            for (var i = 0; i < dc.length; i++) {
-                var metaF = options.snippetsDir + "/" + dc[i] + "/meta.json";
-                if (File.exists(metaF)) {
-                    var sp = File.readJSON(metaF);
-                    if (sp.title != "Defaults") {
-                        results.push({
-                            "title": sp.title,
-                            "action": 'processSnippet',
-                            "actionArgument": options.snippetsDir + "/" + dc[i],
-                            "actionRunsInBackground": true,
-                            "actionReturnsItems": false
-                        });
+    var options = {};
+    if (File.exists(listFlagFile)) {
+        options = File.readJSON(listFlagFile);
+        var results = [];
+        if (argument == null) {
+            try {
+                var dc = File.getDirectoryContents(options.snippetsDir);
+                for (var i = 0; i < dc.length; i++) {
+                    var metaF = options.snippetsDir + "/" + dc[i] + "/meta.json";
+                    if (File.exists(metaF)) {
+                        var sp = File.readJSON(metaF);
+                        if (sp.title != "Defaults") {
+                            results.push({
+                                "title": sp.title,
+                                "action": 'processSnippet',
+                                "actionArgument": options.snippetsDir + "/" + dc[i],
+                                "actionRunsInBackground": true,
+                                "actionReturnsItems": false
+                            });
+                        }
                     }
                 }
+                //
+                // Add the clipboard option.
+                //
+                results.push({
+                    "title": "Clipboard",
+                    "action": 'processSnippet',
+                    "actionArgument": "{{clipboard}}",
+                    "actionReturnsItems": false,
+                    "actionRunsInBackground": true,
+                    "actionReturnsItems": false
+                });
+            } catch (e) {
+                LaunchBar.alert("Snippet Directory not set.");
             }
+        } else {
             //
-            // Add the clipboard option.
+            // We have a list of expansions to propose for the user
+            // to choose from.
             //
-            results.push({
-                "title": "Clipboard",
-                "action": 'processSnippet',
-                "actionArgument": "{{clipboard}}",
-                "actionReturnsItems": false,
-                "actionRunsInBackground": true,
-                "actionReturnsItems": false
-            });
-        } catch (e) {
-            LaunchBar.alert("Snippet Directory not set.");
+            LaunchBar.alert("Argument is: " + argument);
         }
     } else {
-        //
-        // We have a list of expansions to propose for the user
-        // to choose from.
-        //
-        LaunchBar.alert("Argument is: " + argument);
+        LaunchBar.alert("Quiver Library wasn't set.");
+        results = "";
     }
 
     //
@@ -423,7 +429,7 @@ function runWithPaths(paths) {
                         //
                         // Find the Defaults note in the Snippets notebook.
                         //
-                        var notes = getDirectories(quiverDir + "/" + notebooks[i]);
+                        var notes = File.getDirectories(quiverDir + "/" + notebooks[i]);
                         for (var j = 0; j < notes.length; j++) {
                             var noteM = quiverDir + "/" + notebooks[i] + "/" + notes[j] + "/meta.json";
                             if (File.exists(noteM)) {
