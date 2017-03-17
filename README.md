@@ -3,6 +3,19 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+Evaluate JavaScript
+---
+
+This handy action is a good way to test JavaScript; especially, LaunchBar specific JavaScript. Once you have this action installed, simply highlight some JavaScript code, press and hold the key sequence for your LaunchBar. When LaunchBar shows up with the text, send the text to the action. For example, highlight and run this snippet:
+
+    LaunchBar.displayInLargeType({
+        title: 'Don’t you just hate this font?',
+        string: 'You should.',
+        font: 'Comic Sans MS'
+    });
+
+When you send it to this action, a large type display in Comic Sans will ask you if you hate this font.
+
 To Buddhist Year
 ---
 
