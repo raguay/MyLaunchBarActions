@@ -3,6 +3,11 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+To Buddhist Year
+---
+
+This action will convert the current date to the Buddhist calendar and display it in a notification. If a date string is passed, it will convert it to the Buddhist calendar and display it in a notification. The Buddhist date is also copied to the clipboard for easy insertion into a document.
+
 List Processor and List Processor - Options
 ---
 
