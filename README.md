@@ -3,6 +3,16 @@ MyLaunchBarActions
 
 This is my public repository for [LaunchBar 6](http://www.obdev.at/) Actions. My current actions are:
 
+NotePad - Set Note
+---
+
+This action allows you to either `send to` or type in the LaunchBar some text and paste or overwrite what is in a [NotePad](https://github.com/raguay/TextBarScripts) note. **NotePad** is a script for keeping notes that runs on [TextBar](http://richsomerfield.com/apps/textbar/).
+
+NotePad - Paste Note
+---
+
+This action allows you to paste what is in a [NotePad](https://github.com/raguay/TextBarScripts) note to the topmost application. **NotePad** is a script for keeping notes that runs on [TextBar](http://richsomerfield.com/apps/textbar/).
+
 Evaluate JavaScript
 ---
 
